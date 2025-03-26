@@ -1,6 +1,6 @@
 package Homework;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Homework0325 {
     public static void main(String[] args) {
@@ -13,6 +13,10 @@ public class Homework0325 {
         double avg = 0;
         int bigNum =0;
         int smallNum=0;
+
+        Set<Character>set = new HashSet<>();
+        set.add('n');
+        set.add('y');
 
         for(;;){
             System.out.print("x: ");
@@ -34,10 +38,13 @@ public class Homework0325 {
             System.out.println("큰수: " + bigNum);
             System.out.println("작은수: " + smallNum);
 
-            System.out.println("계속하시겠습니까? (y/n)");
-            flag = s.nextLine().charAt(0);
+            do {
+                System.out.print("계속하시겠습니까? (y/n)");
+                flag = s.nextLine().toLowerCase().charAt(0);
 
-            if(flag == 'n' || flag == 'N'){
+            }while(!set.contains(flag));
+
+            if (flag == 'n') {
                 s.close();
                 System.out.println("The End");
                 break;
