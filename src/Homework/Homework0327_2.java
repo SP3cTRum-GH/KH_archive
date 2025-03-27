@@ -45,7 +45,7 @@ public class Homework0327_2 {
                     System.out.println("한글자만 입력해주세요");
                     continue;
                 }
-                isContinue = inputContinue.charAt(0);
+                isContinue = inputContinue.toLowerCase().charAt(0);
                 if (isContinue == 'n' || isContinue == 'y') {
                     break;
                 }

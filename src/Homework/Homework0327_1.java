@@ -21,6 +21,7 @@ public class Homework0327_1 {
                 }
                 System.out.println("양수값을 입력해 주세요");
             }
+
             distence = time * SOUND_SPEED;
             System.out.println("번개가 발생한 곳까지의 거리: " + distence);
 
@@ -32,7 +33,7 @@ public class Homework0327_1 {
                     System.out.println("한글자만 입력해주세요");
                     continue;
                 }
-                isContinue = inputContinue.charAt(0);
+                isContinue = inputContinue.toLowerCase().charAt(0);
                 if (isContinue == 'n' || isContinue == 'y') {
                     break;
                 }
