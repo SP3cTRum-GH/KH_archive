@@ -16,7 +16,7 @@ public class Homework0326_1 {
         String inputDay;
 
         for(;;) {
-            while (!flag) {
+            while (true) {
                 System.out.print("몇일간 가는 거리를 계산하시겠습니까?: ");
                 inputDay = s.nextLine();
                 try {
@@ -24,33 +24,30 @@ public class Homework0326_1 {
                     if(day < 0) {
                         System.out.println("양수를 입력해주세요");
                     }else{
-                        flag = true;
+                        break;
                     }
                 } catch (NumberFormatException e) {
                     System.out.println("유효한 날짜를 입력해주세요");
                 }
-
             }
-            flag = false;
+
             distance = LIGHT_SPEED * 60 * 60 * 24 * day;
             System.out.println(distance + "km");
 
-            do {
-                System.out.print("계속하시겠습니까? (y/n)");
-                inputContinue = s.nextLine();
-                if(inputContinue.length() ==1) {
-                    isContinue = inputContinue.charAt(0);
-                }else {
-                    System.out.println("한글자만 입력해주세요");
-                    continue;
-                }
+           while(true) {
+               System.out.print("계속하시겠습니까? (y/n)");
+               inputContinue = s.nextLine();
+               if (inputContinue.length() != 1) {
+                   System.out.println("한글자만 입력해주세요");
+                   continue;
+               }
+               isContinue = inputContinue.charAt(0);
+               if (isContinue == 'n' || isContinue == 'y') {
+                   break;
+               }
+               System.out.println("유효하지않은 입력입니다 다시 입력해주세요");
+           }
 
-                if(isContinue == 'n' || isContinue == 'y'){
-                    break;
-                }
-                System.out.println("유효하지않은 입력입니다 다시 입력해주세요");
-
-            } while (true);
 
             if (isContinue == 'n') {
                 s.close();
