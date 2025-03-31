@@ -64,8 +64,16 @@ public class Homework0331 {
                             }
                             System.out.println("유효한 값을 입력해주세요");
                         }
-                        System.out.print("성별: ");
-                        gender[i] = s.nextLine().charAt(0);
+                        while(true){
+                            System.out.print("성별(m/f): ");
+                            String input = s.nextLine().toLowerCase();
+                            boolean isInputCheck = Pattern.matches("^[m,f]$",input);
+                            if(isInputCheck) {
+                                gender[i] = input.charAt(0);
+                                break;
+                            }
+                            System.out.println("유효한 값을 입력해주세요");
+                        }
                         while(true){
                             System.out.print("국어: ");
                             String input = s.nextLine();
