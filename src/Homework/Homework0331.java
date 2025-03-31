@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class Homework0331 {
-    public static final int SIZE = 10;
+    public static final int SIZE = 3;
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         //1.학생성적프로그램 작성 (10명정도)
@@ -20,9 +20,6 @@ public class Homework0331 {
         int choice=0;
         boolean stopFlag = false;
 
-        //입력: 이름, 나이, 성별, 국어, 영어
-
-        //총점,평균,등급 계산
         while(!stopFlag) {
             //메뉴생성(학생입력, 학생출력, 학생계산, 학생검색(이름))
             System.out.println("=================");
