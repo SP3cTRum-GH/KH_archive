@@ -94,15 +94,12 @@ public class Homework0401 {
     }
     public static String patternInspection(Scanner s, String request, String regex) {
         String input;
-
-        while (true) {
-            System.out.print(request);
-            input = s.nextLine();
-            if (Pattern.matches(regex, input)) {
-                return input; // 유효한 입력값 리턴
-            }
-            System.out.println("유효한값을 입력해주세요");
-
+        System.out.print(request);
+        input = s.nextLine();
+        if (Pattern.matches(regex, input)) {
+            return input; // 유효한 입력값 리턴
         }
+        System.out.println("유효한값을 입력해주세요");
+        return patternInspection(s,request,regex);
     }
 }
