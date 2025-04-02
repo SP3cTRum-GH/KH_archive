@@ -22,13 +22,8 @@ public class Homework0331 {
 
         while(!stopFlag) {
             //메뉴생성(학생입력, 학생출력, 학생계산, 학생검색(이름))
-            System.out.println("=================");
-            System.out.println("1.학생정보 입력");
-            System.out.println("2.학생정보 출력");
-            System.out.println("3.학생점수 계산");
-            System.out.println("4.학생검색");
-            System.out.println("5.종료");
-            System.out.println("=================");
+            menuDisplay();
+
             while (true) {
                 System.out.print("메뉴 번호 입력: ");
                 String input = s.nextLine();
@@ -163,5 +158,14 @@ public class Homework0331 {
         }
         s.close();
         System.out.println("The End");
+    }
+    public static void menuDisplay(){
+        System.out.println("=================");
+        System.out.println("1.학생정보 입력");
+        System.out.println("2.학생정보 출력");
+        System.out.println("3.학생점수 계산");
+        System.out.println("4.학생검색");
+        System.out.println("5.종료");
+        System.out.println("=================");
     }
 }
