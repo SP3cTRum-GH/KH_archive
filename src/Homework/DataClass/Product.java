@@ -1,4 +1,4 @@
-package Homework;
+package Homework.DataClass;
 
 public class Product {
     private String name;
@@ -7,6 +7,14 @@ public class Product {
 
     public void sale(int salePercent){
         price = price - (price * salePercent / 100);
+    }
+
+    public Product() {
+    }
+    public Product(String name, int price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
     }
 
     public void order(int order){
