@@ -5,20 +5,20 @@ public class Product {
     private int price;
     private int quantity;
 
-    public void sale(int salePercent){
-        price = price - (price * salePercent / 100);
-    }
-
     public Product() {
     }
+
     public Product(String name, int price, int quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
     }
-
     public void order(int order){
         quantity = quantity - order;
+    }
+
+    public void sale(int salePercent){
+        price = price - (price * salePercent / 100);
     }
 
     public String getName() {

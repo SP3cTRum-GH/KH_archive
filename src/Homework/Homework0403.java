@@ -56,6 +56,10 @@ public class Homework0403 {
                         System.out.println(i+1+"번째 제품"+products.get(i).toString());
                     }
                     int choiceSale = Integer.parseInt(patternInspection(s,"몇번째 제품을 할인할까요?: ","^[0-9]{1,}$"));
+                    if(choiceSale>products.size()){
+                        System.out.println("유효하지않은 선택입니다.");
+                        continue;
+                    }
                     int salePersent = Integer.parseInt(patternInspection(s, "몇퍼센트 할인할까요?: ","^[0-9]{1,2}$"));
                     int currentPrice = products.get(choiceSale-1).getPrice();
                     products.get(choiceSale-1).sale(salePersent);
