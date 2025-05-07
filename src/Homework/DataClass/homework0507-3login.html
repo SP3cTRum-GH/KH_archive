@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>login</title>
+        <link rel="stylesheet" href="linkToCSS" />
+    </head>
+    <body>
+        <div class="wrap">
+            <h1>로그인</h1>
+            <table>
+                <thead>
+                    <input type="radio" name="member" id="member"><label for="member">회원</label>
+                    <input type="radio" name="nonmember" id="nonmember"><label for="nonmember">비회원</label>
+                </thead>
+                <tr>
+                    <td><input type="text" name="id" id="id" placeholder="11번가 아이디"></td>
+                    <td rowspan="2" style="background-color:red; text-align:center">로그인</td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="pwd" id="pwd"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="saveid" id="saveid"><label for="saveid">아이디저장</label></td>
+                    <td>OTP로그인</td>
+                </tr>
+            </table>
+            <a href="./homework0507-3.html"><input type="submit" value="회원가입"></a>
+            <a href="./homework0507-3.html"><input type="submit" value="아이디찾기"></a>
+            <a href="./homework0507-3.html"><input type="submit" value="비밀번호찾기"></a>
+        </div>
+    </body>
+</html>

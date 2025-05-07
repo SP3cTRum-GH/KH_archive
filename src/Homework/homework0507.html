@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          max-width: 600px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        h1, h4 {
+          color: #333;
+        }
+        label {
+          display: block;
+          margin-top: 10px;
+        }
+        input[type="text"], input[type="password"], input[type="tel"], select, textarea {
+          width: 100%;
+          padding: 8px;
+          margin-top: 5px;
+          box-sizing: border-box;
+        }
+        textarea {
+          height: 80px;
+        }
+        .checkbox-group, .radio-group {
+          margin-top: 10px;
+        }
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 10px;
+        }
+        table, th, td {
+          border: 1px solid #ccc;
+        }
+        th, td {
+          padding: 8px;
+          text-align: center;
+        }
+        .submit-btn {
+          margin-top: 20px;
+          background-color: orange;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          font-size: 16px;
+          cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1>회원가입</h1>
+
+<form>
+    <h3>필수 항목</h3>
+    <input type="text" name="id" style="margin-bottom: 3%;" placeholder="아이디">
+
+    <input type="password" name="password" placeholder="비밀번호">
+    <input type="password" name="confirm_password" style="margin-bottom: 3%;" placeholder="비밀번호 확인">
+
+    <input type="text" name="id" style="margin-bottom: 3%;" placeholder="이름">
+
+    <div style="display: flex; gap: 10px; margin-bottom: 5%;">
+        <input type="text" name="email" placeholder="이메일">@
+        <select name="selectDomain">
+            <option>gmail.com</option>
+            <option>naver.com</option>
+            <option>daum.net</option>
+        </select>
+    </div>
+
+    <div class="checkbox-group">
+        <label><input type="checkbox"> 만 14세 이상입니다.</label>
+        <label><input type="checkbox"> 이용약관 동의</label>
+        <label><input type="checkbox"> 개인정보 수집 및 이용 동의</label>
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>구분</th>
+            <th>항목</th>
+            <th>보유 및 이용기간</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>필수</td>
+            <td>이유와 사건, 서비스 이용자 신세</td>
+            <td>회원회 종료 후 5년까지</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3>선택 항목</h3>
+
+    <div style="display: flex; gap: 10px; margin-bottom:5%">
+    <label>생년월일</label>
+        <select style="flex: 1;"><option>년</option></select>
+        <select style="flex: 1;"><option>월</option></select>
+        <select style="flex: 1;"><option>일</option></select>
+    </div>
+
+    <div class="radio-group"style="display: flex; margin-bottom:5%">
+    <label>성별</label>
+        <label style="flex: 1;"><input type="radio" name="gender"> 남자</label>
+        <label style="flex: 1;"><input type="radio" name="gender"> 여자</label>
+    </div>
+
+    <form class="checkbox-group">
+       <fieldset>
+          <div>
+            <label ><input type="checkbox"> 전체동의</label>
+          </div>
+          <div>
+            <label ><input type="checkbox"> 생년월일과 성별 수집 및 이용 동의</label>
+            <label><input type="checkbox"> 이메일 링크 수습 동의</label>
+            <label><input type="checkbox"> 개인정보 유용기간 저장 (1년)</label>
+          </div>
+       </fieldset>
+    </form>
+
+    <table>
+        <thead>
+        개인정보 수집 및 이용
+        <tr>
+            <th>구분</th>
+            <th>항목</th>
+            <th>보유 및 이용기간</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>선택</td>
+            <td>생년월일, 성별</td>
+            <td>회원회 종료 후 5년까지</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <button type="submit" class="submit-btn">회원가입하기</button>
+</form>
+</body>
+</html>
